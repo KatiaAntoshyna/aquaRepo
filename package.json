@@ -1,0 +1,22 @@
+{
+  "name": "aquaproject",
+  "version": "1.0.0",
+  "description": "project to control my arduino relays through web interface",
+  "main": "index.html",
+  "scripts": {
+    "precommit":  "gh-pages -d ./",
+    "prepush": "npm test",
+    "test": "/home/kate/HTML+JS/Aquarium/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KatiaAntoshyna/aquaRepo"
+  },
+  "keywords": ["javascript", "arduino"],
+  "author": "kate",
+  "license": "ISC",
+  "devDependencies": {
+    "gh-pages": "^1.1.0",
+    "husky": "^0.14.3"
+  }
+}

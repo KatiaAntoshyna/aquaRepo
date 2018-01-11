@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title></title>
+  <style>
+    .button {
+      background-color: rgb(52, 99, 5);
+      /* Green */
+      border: none;
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+    }
+
+    .button3 {
+      padding: 14px 40px;
+    }
+  </style>
+</head>
+
+<body>
+  <div align='center'>
+    <p id="justP">Just p</p>
+    <button class="button button3" id="AIR" onclick="changeButton('AIR')">AIR</button>
+    <br>
+    <button class="button button3" id="LIGHT" onclick="changeButton('LIGHT')">LIGHT</button>
+    <br>
+    <button class="button button3" id="FILTER" onclick="changeButton('FILTER')">FILTER</button>
+    <br>
+    <button class="button button3" id="OTHER" onclick="changeButton('OTHER')">OTHER</button>
+    <br>
+    <button class="button button3" style="background-color:rgb(188, 190, 186)" id="okButton" onclick="okDealer()">OK!</button>
+    <br>
+
+    <script src='aquariumScript.js'></script>
+
+
+  </div>
+</body>
+
+</html>
