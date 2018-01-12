@@ -4,9 +4,7 @@
   "description": "project to control my arduino relays through web interface",
   "main": "index.html",
   "scripts": {
-    "precommit":  "gh-pages -d ./",
-    "prepush": "npm test",
-    "test": "/home/kate/HTML+JS/Aquarium/index.js"
+    "prepush": "gh-pages -d ./"
   },
   "repository": {
     "type": "git",
