@@ -14,10 +14,10 @@ var states = 10101; // later read this from http!!!
 
 document.getElementById("justP").innerHTML =
   "states = 1" +
-  switchA.activity +
-  switchL.activity +
-  switchF.activity +
-  switchO.activity;
+  switchA.activity.valueOf() +
+  switchL.activity.valueOf() +
+  switchF.activity.valueOf() +
+  switchO.activity.valueOf();
 
 function changeButton(name) {
   if (document.getElementById(name).style.backgroundColor == "rgb(52, 99, 5)") {
