@@ -8,12 +8,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/KatiaAntoshyna/aquaRepo"
+    "url": "https://github.com/kantoshyna/aquaRepo"
   },
-  "keywords": [
-    "javascript",
-    "arduino"
-  ],
+  "keywords": ["javascript", "arduino"],
   "author": "kate",
   "license": "ISC",
   "devDependencies": {
