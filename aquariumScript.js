@@ -13,7 +13,7 @@ var switchO = new tumblr("OTHER", 1);
 var states = 10101; // later read this from http!!!
 
 document.getElementById("justP").innerHTML =
-  "states = 1" +
+  "states = 10" +
   switchA.activity.toString() +
   switchL.activity.toString() +
   switchF.activity.toString() +
