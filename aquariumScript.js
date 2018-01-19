@@ -1,23 +1,23 @@
-require("serverScript.js");
+//require("serverScript.js");
 
-function tumblr(name, num) {
+function Tumblr(name, num) {
   var a = Math.floor((states % Math.pow(10, num + 1)) / Math.pow(10, num));
   this.activity = +a;
   this.color = document.getElementById(name).style.backgroundColor;
 }
 
-var switchA = new tumblr("AIR", 4);
-var switchL = new tumblr("LIGHT", 3);
-var switchF = new tumblr("FILTER", 2);
-var switchO = new tumblr("OTHER", 1);
+var switchA = new Tumblr("AIR", 4);
+var switchL = new Tumblr("LIGHT", 3);
+var switchF = new Tumblr("FILTER", 2);
+var switchO = new Tumblr("OTHER", 1);
 var states = 10101; // later read this from http!!!
 
 document.getElementById("justP").innerHTML =
-  "states = 10" +
-  switchA.activity.toString() +
-  switchL.activity.toString() +
-  switchF.activity.toString() +
-  switchO.activity.toString();
+  "states = 11" +
+  switchA.activity.value +
+  switchL.activity.value +
+  switchF.activity.value +
+  switchO.activity.value;
 
 function changeButton(name) {
   if (document.getElementById(name).style.backgroundColor == "rgb(52, 99, 5)") {
