@@ -1,3 +1,5 @@
+require("serverScript.js");
+
 function tumblr(name, num) {
   a = Math.floor((states % Math.pow(10, num + 1)) / Math.pow(10, num));
   this.activity = +a;
