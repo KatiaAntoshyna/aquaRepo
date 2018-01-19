@@ -1,7 +1,7 @@
 require("serverScript.js");
 
 function tumblr(name, num) {
-  a = Math.floor((states % Math.pow(10, num + 1)) / Math.pow(10, num));
+  var a = Math.floor((states % Math.pow(10, num + 1)) / Math.pow(10, num));
   this.activity = +a;
   this.color = document.getElementById(name).style.backgroundColor;
 }
