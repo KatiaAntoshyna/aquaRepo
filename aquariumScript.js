@@ -26,8 +26,9 @@ function changeButton(name) {
 }
 
 function switchActivity(name) {
-  if (name.color == "rgb(52, 99, 5)") name.activity = 1;
-  else name.activity = 0;
+  if (name.color == "rgb(52, 99, 5)") {
+    name.activity = 1;
+  } else name.activity = 2;
 }
 
 function okDealer() {
