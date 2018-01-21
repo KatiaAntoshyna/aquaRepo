@@ -42,6 +42,6 @@ function okDealer() {
     1000 * switchA.activity +
     100 * switchL.activity +
     10 * switchF.activity +
-    switchO;
+    switchO.activity;
   document.getElementById("justP").innerHTML = "states = " + states;
 }
