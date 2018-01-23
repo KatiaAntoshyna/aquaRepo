@@ -9,14 +9,14 @@ function Tumblr(name, num) {
   } else if ((a = 1)) {
     document.getElementById(name).style.backgroundColor = "rgb(52, 99, 5)";
     this.color = document.getElementById(name).style.backgroundColor;
-  } else document.getElementById("justP").innerHTML = "error!";
+  }
 }
 
-var states = 10110; // later read this from http!!!
-var AIR = new Tumblr("AIR", 4);
-var LIGHT = new Tumblr("LIGHT", 3);
-var FILTER = new Tumblr("FILTER", 2);
-var OTHER = new Tumblr("OTHER", 1);
+var states = 10101; // later read this from http!!!
+var AIR = new Tumblr("AIR", 3);
+var LIGHT = new Tumblr("LIGHT", 2);
+var FILTER = new Tumblr("FILTER", 1);
+var OTHER = new Tumblr("OTHER", 4);
 
 document.getElementById("justP").innerHTML =
   "states = 1" +
@@ -31,20 +31,21 @@ function changeButton(name) {
   } else {
     document.getElementById(name).style.backgroundColor = "rgb(52, 99, 5)";
   }
-  this.color = document.getElementById(name).style.backgroundColor;
+  name.color = document.getElementById(name).style.backgroundColor;
 }
 
 function switchActivity(name) {
-  if (this.color == "rgb(52, 99, 5)") {
-    this.activity = 1;
-  } else this.activity = 0;
+  if (name.color == "rgb(52, 99, 5)") {
+    name.activity = 1;
+  } else name.activity = 0;
+  return name;
 }
 
 function okDealer() {
-  switchActivity(AIR);
-  switchActivity(LIGHT);
-  switchActivity(FILTER);
-  switchActivity(OTHER);
+  AIR = switchActivity(AIR);
+  LIGHT = switchActivity(LIGHT);
+  FILTER = switchActivity(FILTER);
+  OTHER = switchActivity(OTHER);
   // send a http (?) signal to arduino
   states =
     10000 +
