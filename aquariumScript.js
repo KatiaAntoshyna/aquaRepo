@@ -12,7 +12,7 @@ function Tumblr(name, num) {
   }
 }
 
-var states = 10101; // later read this from http!!!
+var states = 11000; // later read this from http!!!
 var AIR = new Tumblr("AIR", 3);
 var LIGHT = new Tumblr("LIGHT", 2);
 var FILTER = new Tumblr("FILTER", 1);
@@ -31,7 +31,6 @@ function changeButton(name) {
   } else {
     document.getElementById(name).style.backgroundColor = "rgb(52, 99, 5)";
   }
-  name.color = document.getElementById(name).style.backgroundColor;
 }
 
 function switchActivity(name) {
@@ -42,6 +41,10 @@ function switchActivity(name) {
 }
 
 function okDealer() {
+  AIR.color = document.getElementById('AIR').style.backgroundColor;
+  LIGHT.color = document.getElementById("LIGHT").style.backgroundColor;
+  FILTER.color = document.getElementById('FILTER').style.backgroundColor;
+  OTHER.color = document.getElementById('OTHER').style.backgroundColor;
   AIR = switchActivity(AIR);
   LIGHT = switchActivity(LIGHT);
   FILTER = switchActivity(FILTER);
