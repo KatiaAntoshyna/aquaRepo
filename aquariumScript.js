@@ -1,8 +1,8 @@
 //require("serverScript.js");
 
 function Tumblr(name, num) {
-  var a = Math.floor((states % Math.pow(10, num + 1)) / Math.pow(10, num));
-  this.activity = +a;
+  var a = Math.floor((states % Math.pow(10, num)) / Math.pow(10, num - 1));
+  this.activity = a;
   if (a == 0) {
     document.getElementById(name).style.backgroundColor = "red";
   } else {
@@ -11,10 +11,10 @@ function Tumblr(name, num) {
 }
 
 var states = 11000; // later read this from http!!!
-var AIR = new Tumblr("AIR", 3);
-var LIGHT = new Tumblr("LIGHT", 2);
-var FILTER = new Tumblr("FILTER", 1);
-var OTHER = new Tumblr("OTHER", 4);
+var AIR = new Tumblr("AIR", 4);
+var LIGHT = new Tumblr("LIGHT", 3);
+var FILTER = new Tumblr("FILTER", 2);
+var OTHER = new Tumblr("OTHER", 1);
 
 document.getElementById("justP").innerHTML =
   "states = 1" +
