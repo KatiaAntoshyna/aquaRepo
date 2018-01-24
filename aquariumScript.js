@@ -3,12 +3,10 @@
 function Tumblr(name, num) {
   var a = Math.floor((states % Math.pow(10, num + 1)) / Math.pow(10, num));
   this.activity = +a;
-  if ((a = 0)) {
+  if (a == 0) {
     document.getElementById(name).style.backgroundColor = "red";
-    this.color = document.getElementById(name).style.backgroundColor;
-  } else if ((a = 1)) {
+  } else {
     document.getElementById(name).style.backgroundColor = "rgb(52, 99, 5)";
-    this.color = document.getElementById(name).style.backgroundColor;
   }
 }
 
@@ -41,10 +39,10 @@ function switchActivity(name) {
 }
 
 function okDealer() {
-  AIR.color = document.getElementById('AIR').style.backgroundColor;
+  AIR.color = document.getElementById("AIR").style.backgroundColor;
   LIGHT.color = document.getElementById("LIGHT").style.backgroundColor;
-  FILTER.color = document.getElementById('FILTER').style.backgroundColor;
-  OTHER.color = document.getElementById('OTHER').style.backgroundColor;
+  FILTER.color = document.getElementById("FILTER").style.backgroundColor;
+  OTHER.color = document.getElementById("OTHER").style.backgroundColor;
   AIR = switchActivity(AIR);
   LIGHT = switchActivity(LIGHT);
   FILTER = switchActivity(FILTER);
