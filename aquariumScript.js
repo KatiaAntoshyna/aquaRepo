@@ -2,7 +2,7 @@
 
 function Tumblr(name, num) {
   var a = Math.floor((states % Math.pow(10, num)) / Math.pow(10, num - 1));
-  this.activity = a;
+  this.activity = +a;
   if (a == 0) {
     document.getElementById(name).style.backgroundColor = "red";
   } else {
