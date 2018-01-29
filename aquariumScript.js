@@ -64,7 +64,29 @@ OTHER = Tumblr("OTHER", 1);
   OTHER.activity;
   }
 
-
+function globalResetDealer() {
+  states = 11100; //read from http!!!
+AIR = Tumblr("AIR", 4);
+LIGHT = Tumblr("LIGHT", 3);
+FILTER = Tumblr("FILTER", 2);
+OTHER = Tumblr("OTHER", 1);
+  
+  AIR.color = document.getElementById("AIR").style.backgroundColor;
+  LIGHT.color = document.getElementById("LIGHT").style.backgroundColor;
+  FILTER.color = document.getElementById("FILTER").style.backgroundColor;
+  OTHER.color = document.getElementById("OTHER").style.backgroundColor;
+  AIR = switchActivity(AIR);
+  LIGHT = switchActivity(LIGHT);
+  FILTER = switchActivity(FILTER);
+  OTHER = switchActivity(OTHER);
+  
+  document.getElementById("justP").innerHTML =
+  "states = 1" +
+  AIR.activity +
+  LIGHT.activity +
+  FILTER.activity +
+  OTHER.activity;
+  }
 
 function okDealer() {
   oldStates = states;
