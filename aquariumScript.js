@@ -46,6 +46,12 @@ AIR = Tumblr("AIR", 4);
 LIGHT = Tumblr("LIGHT", 3);
 FILTER = Tumblr("FILTER", 2);
 OTHER = Tumblr("OTHER", 1);
+  document.getElementById("justP").innerHTML =
+  "states = 1" +
+  AIR.activity +
+  LIGHT.activity +
+  FILTER.activity +
+  OTHER.activity;
   }
 
 
