@@ -67,6 +67,7 @@ OTHER = Tumblr("OTHER", 1);
 
 
 function okDealer() {
+  oldStates = states;
   AIR.color = document.getElementById("AIR").style.backgroundColor;
   LIGHT.color = document.getElementById("LIGHT").style.backgroundColor;
   FILTER.color = document.getElementById("FILTER").style.backgroundColor;
