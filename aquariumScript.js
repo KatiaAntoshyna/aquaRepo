@@ -10,7 +10,9 @@ function Tumblr(name, num) {
   }
 }
 
+
 var states = 11000; // later read this from http!!!
+var oldStates = states;
 var AIR = new Tumblr("AIR", 4);
 var LIGHT = new Tumblr("LIGHT", 3);
 var FILTER = new Tumblr("FILTER", 2);
@@ -37,6 +39,16 @@ function switchActivity(name) {
   } else name.activity = 0;
   return name;
 }
+
+function resetDealer() {
+  states = oldStates;
+AIR = Tumblr("AIR", 4);
+LIGHT = Tumblr("LIGHT", 3);
+FILTER = Tumblr("FILTER", 2);
+OTHER = Tumblr("OTHER", 1);
+  }
+
+
 
 function okDealer() {
   AIR.color = document.getElementById("AIR").style.backgroundColor;
