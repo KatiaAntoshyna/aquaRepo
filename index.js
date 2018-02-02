@@ -1,15 +1,14 @@
+var path = require("path");
 var express = require("express");
-var app = express();
-var port = 3000;
+var exphbs = require("express-handlebars");
 
-app.get("/", function(request, response) {
-  response.send("Hello from Express!");
-});
-
-app.listen(port, err => {
-  if (err) {
-    return console.log("something bad happened", err);
-  }
-
-  console.log(`server is listening on ${port}`);
-});
+app.engine(
+  ".hbs",
+  exphbs({
+    defaultLayout: "main",
+    extname: ".hbs",
+    layoutsDir: path.join(__dirname, "views/layouts")
+  })
+);
+app.set("view engine", ".hbs");
+app.set("views", path.join(__dirname, "views"));

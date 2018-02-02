@@ -10,7 +10,10 @@
     "type": "git",
     "url": "https://github.com/kantoshyna/aquaRepo"
   },
-  "keywords": ["javascript", "arduino"],
+  "keywords": [
+    "javascript",
+    "arduino"
+  ],
   "author": "kate",
   "license": "ISC",
   "devDependencies": {
@@ -18,6 +21,7 @@
     "husky": "^0.14.3"
   },
   "dependencies": {
-    "express": "^4.16.2"
+    "express": "^4.16.2",
+    "express-handlebars": "^3.0.0"
   }
 }
